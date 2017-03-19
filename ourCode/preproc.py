@@ -137,4 +137,6 @@ if __name__ == "__main__":
     print d2
     
     info().count0(d1)
+    info().count0(D.data['X_Valid'])
+    info().count0(D.data['X_test'])
     
