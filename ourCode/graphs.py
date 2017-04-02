@@ -34,7 +34,6 @@ def bar_R_by_age(data):
     plt.title("$Average Ratings By Age Groups$")
     plt.savefig("Average Ratings By Age Groups.png") #to save the file
 
-
 def bar_R_by_gender(data):
     males = np.array(data[data["gender_M"]==1])
     females = np.array(data[data["gender_F"]==1])
@@ -216,11 +215,36 @@ def bar_R_by_jobs_and_Age(data):
     plt.yticks([1],[""])
     plt.savefig("Average Ratings By Jobs And AgeGroups2.png") #to save the file
 
+def error_Bar(data):
+    under18 = np.array(data[data["age_-18"]==1])
+    from18to24 = np.array(data[data["age_18-24"]==1])
+    from25to34 = np.array(data[data["age_25-34"]==1])
+    from35to44 = np.array(data[data["age_35-44"]==1])
+    from45to49 = np.array(data[data["age_45-49"]==1])
+    from50to55 = np.array(data[data["age_50-55"]==1])
+    over56 = np.array(data[data["age_56+"]==1])
 
-
-
-
-
+    avergaeUnder18=np.mean(under18[:,-1])
+    avergaeFrom18to24 = np.mean(from18to24[:,-1])
+    avergaeFrom25to34 = np.mean(from25to34[:,-1])
+    avergaeFrom35to44 = np.mean(from35to44[:,-1])
+    avergaeFrom45to49 = np.mean(from45to49[:,-1])
+    avergaeFrom50to55 = np.mean(from50to55[:,-1])
+    over56 = np.mean(over56[:,-1])
+    averagesByAge=np.array([avergaeUnder18,avergaeFrom18to24,avergaeFrom25to34,avergaeFrom35to44,avergaeFrom45to49,avergaeFrom50to55,over56])
+    #error bar values that vary with averageRating
+    error = 0.1 + 0.2 * averagesByAge
+    lower_error = 0.3 * error
+    upper_error = error
+    asymmetric_error = [lower_error, upper_error]
+    fig, (ax0, ax1) = plt.subplots(nrows=2, sharex=True)
+    ax0.errorbar([0,18,25, 35, 45, 50,55], averagesByAge, yerr=error, fmt='-o')
+    ax0.set_title('$Average Ratings By Age Groups$, $Symmetric Error$')
+    ax1.errorbar([0,18,25, 35, 45, 50,55], averagesByAge, xerr=asymmetric_error, fmt='o')
+    ax1.set_title('$Average Ratings By Age Groups$, $Asymmetric Error$')
+    ax1.set_yscale('log')
+    plt.show()
+    plt.savefig("Error Bar of Average Ratings By Age Groups.png") #to save the file
 
 
 
