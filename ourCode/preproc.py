@@ -21,9 +21,6 @@ import data_manager
 import numpy as np
 import preprocAuxFunction as paf
 
-'''
-class to transform data using PCA presently inspirate by Isabelle Guyon's code 
-'''
 class preprocessingPCA(BaseEstimator):
     
     '''def __init__(self, Data ,nfeatures):
