@@ -96,7 +96,7 @@ overwrite_output = True # save space
 # Use default location for the input and output data:
 # If no arguments to run.py are provided, this is where the data will be found
 # and the results written to. Change the root_dir to your local directory.
-root_dir = "/Users/isabelleguyon/Documents/Projects/ParisSaclay/Projects/ChaLab/Examples/iris/"
+root_dir = "/home/echaimae.ouaddane/Téléchargements/movies.data/public_data"
 default_input_dir = root_dir + "input_data_1_2/"
 default_output_dir = root_dir + "scoring_input_1_2/res"
 
@@ -125,7 +125,7 @@ if os.path.isdir(codalab_run_dir):
     run_dir=codalab_run_dir
     running_on_codalab = True
     print "Running on Codalab!"
-lib_dir = os.path.join(run_dir, "sample_code")
+lib_dir = os.path.join(run_dir, "ourCode")
 res_dir = os.path.join(run_dir, "res")
 
 # Our libraries  
