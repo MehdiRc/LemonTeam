@@ -35,14 +35,26 @@ def loadSolution(fileName):
     return dataMat
 
     
-    
+        
 if __name__ == '__main__':
     
     data = loadData('movierec_train.data')
     target = loadSolution('movierec_train.solution')
     test = loadData('movierec_test.data')
-
+    
+    pred = []
+    
     rf = RandomForestRegressor()
     rf.fit(data, target)
     
-    print rf.predict(test)
+    predict = rf.predict(test)
+    pred.extend(predict)
+
+    for i in range (49) :
+        rf = RandomForestRegressor()
+        rf.fit(data, target)
+        predict = rf.predict(test)
+        pred = np.add(pred,predict)
+        
+    print pred/50
+    
