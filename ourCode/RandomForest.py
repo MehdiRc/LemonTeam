@@ -5,6 +5,10 @@ Created on Tue Mar 21 20:47:44 2017
 @author: Zeyu YANG
 """
 
+path.append('../public_data')
+path.append('../ourCode')
+path.append('ourCode/')
+
 from sklearn.ensemble import RandomForestRegressor
 
 def loadData(fileName):
