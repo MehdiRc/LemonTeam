@@ -1,5 +1,5 @@
 
-<h1 style="text-align: center;">Visualizing Provenance to Support Exploratory Trade-off Analysis</h1>
+<h1 style="text-align: center;">The Movie Recommendation Challenge</h1>
 <h4><code>Lemon Team  </code></h4>
 <p><strong style="color: #000;"></strong></p>
 
