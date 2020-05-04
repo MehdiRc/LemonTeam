@@ -3,10 +3,10 @@
 <h4><code>Lemon Team  </code></h4>
 <p><strong style="color: #000;"></strong></p>
 
-Team Coordinator: Mehdi Chakhchoukh
-Data Cleaning: Pierre Charpentier, Alex Abgrall 
-Data Visualisation: Mehdi Chakhchoukh, Echaimae Ouaddane
-Prediction Model: Handy Pedro Valery, Zeyu yang
+Team Coordinator: Mehdi Chakhchoukh  
+Data Cleaning: Pierre Charpentier, Alex Abgrall  
+Data Visualisation: Mehdi Chakhchoukh, Echaimae Ouaddane  
+Prediction Model: Handy Pedro Valery, Zeyu yang  
 <hr>
 
 <p>
